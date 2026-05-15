@@ -828,15 +828,23 @@ a {
   color: var(--accent);
 }
 
+@media (max-width: 1024px) {
+  .page-shell {
+    padding: 0 20px 48px;
+  }
+
+  .about-grid {
+    gap: 24px;
+  }
+
+  .skill-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .page-shell {
     padding: 0 24px 48px;
-  }
-
-  .topbar {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 16px;
   }
 
   .about-grid {
@@ -844,8 +852,13 @@ a {
     gap: 24px;
   }
 
-  .skill-charts {
+  .work-grid,
+  .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .graph-grid {
@@ -855,6 +868,24 @@ a {
   .about-highlights {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 0 24px 48px;
+  }
+
+  .topbar {
+    padding: 20px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
   }
 
   .experience-flow .flow-track {
@@ -872,21 +903,6 @@ a {
 
   .flow-step::before {
     left: 8px;
-  }
-}
-
-@media (max-width: 640px) {
-  .work-grid,
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-highlights {
-    grid-template-columns: 1fr;
   }
   .hero {
     padding-top: 100px;
