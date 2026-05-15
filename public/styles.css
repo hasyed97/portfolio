@@ -579,6 +579,175 @@ a {
   line-height: 1.85;
 }
 
+.skills-list,
+.experience-cards,
+.project-grid,
+.insight-grid,
+.testimonial-grid,
+.contact-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.skills-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 24px;
+}
+
+.skill-category,
+.experience-card,
+.project-card,
+.insight-card,
+.testimonial-card,
+.contact-card {
+  padding: 24px;
+  border-radius: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  display: grid;
+  gap: 14px;
+}
+
+.skill-category h3,
+.experience-card h3,
+.project-card h3,
+.insight-card h3,
+.testimonial-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.skill-category ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.skill-category li {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.experience-card {
+  border-left: 4px solid rgba(56, 189, 248, 0.75);
+}
+
+.experience-card .experience-meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.experience-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.project-card .project-tags,
+.insight-card .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.project-card span,
+.insight-card span.tag,
+.testimonial-card span.role-tag {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.insight-card p,
+.testimonial-card p,
+.project-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.testimonial-card {
+  padding: 28px;
+}
+
+.testimonial-rating {
+  margin: 0;
+  color: #facc15;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.testimonial-author {
+  display: grid;
+  gap: 6px;
+}
+
+.testimonial-author strong {
+  color: var(--text);
+}
+
+.contact-grid {
+  grid-template-columns: 1.2fr 0.8fr;
+  margin-top: 24px;
+}
+
+.contact-details p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.contact-form button {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.2);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus-visible {
+  background: rgba(56, 189, 248, 0.35);
+}
+
 .graph-title {
   margin: 0;
   color: var(--muted);
@@ -867,7 +1036,13 @@ a {
   }
 
   .graph-grid,
-  .skill-charts {
+  .skill-charts,
+  .skills-list,
+  .experience-cards,
+  .project-grid,
+  .insight-grid,
+  .testimonial-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
