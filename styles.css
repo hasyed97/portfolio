@@ -958,6 +958,24 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .experience-flow .flow-track {
+    padding-left: 0;
+  }
+
+  .experience-flow .flow-track::before {
+    left: 14px;
+  }
+
+  .flow-step {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
+  .flow-step::before {
+    left: 8px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
