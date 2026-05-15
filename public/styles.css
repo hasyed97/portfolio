@@ -828,7 +828,7 @@ a {
   color: var(--accent);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .page-shell {
     padding: 0 24px 48px;
   }
@@ -839,18 +839,21 @@ a {
     gap: 16px;
   }
 
-  .work-grid,
-  .skills-grid,
-  .skill-charts,
-  .graph-grid,
-  .about-grid,
-  .stats-grid,
-  .about-highlights {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .skill-charts {
     grid-template-columns: 1fr;
   }
 
-  .about-grid,
+  .graph-grid {
+    grid-template-columns: 1fr;
+  }
+
   .about-highlights {
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
 
@@ -873,6 +876,18 @@ a {
 }
 
 @media (max-width: 640px) {
+  .work-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
   .hero {
     padding-top: 100px;
   }
