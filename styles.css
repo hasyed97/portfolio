@@ -326,6 +326,30 @@ a {
   margin-top: 24px;
 }
 
+.skills-paired {
+  display: grid;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.skill-row-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.skill-row-pair .skill-tile {
+  margin: 0;
+}
+
+.skill-row-pair .chart-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .chart-title {
   margin: 0;
   color: var(--muted);
@@ -1046,6 +1070,11 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .skill-row-pair {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .about-highlights {
     grid-template-columns: 1fr 1fr;
     gap: 24px;
@@ -1136,6 +1165,15 @@ a {
 
   .about-highlights {
     grid-template-columns: 1fr;
+  }
+
+  .skill-row-pair {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skill-row-pair .chart-card {
+    padding: 18px;
   }
 
   .experience-flow .flow-track {
