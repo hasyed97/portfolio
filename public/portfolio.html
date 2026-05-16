@@ -22,16 +22,21 @@
     <div class="page-shell">
       <header class="topbar">
         <div class="brand">Syed Hasan</div>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="topbar-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">Theme: System</button>
+          <button class="menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
           <a href="#about">About</a>
+          <a href="#insights">Blogs</a>
+          <a href="#testimonials">Testimonials</a>
           <a href="#footer">Contact</a>
         </nav>
       </header>
@@ -133,7 +138,7 @@
             <p class="section-label">Skills</p>
             <h2>Technical strength across AI, backend, and cloud systems.</h2>
           </div>
-          <div class="skills-grid">
+          <!-- <div class="skills-grid">
             <article class="skill-tile">
               <h3>AI &amp; LLM Engineering</h3>
               <p>LLM workflows, LangGraph, RAG pipelines, prompt engineering, and Voice AI at production scale.</p>
@@ -154,76 +159,123 @@
               <p>Team coaching, architectural review, product delivery, and cross-functional alignment.</p>
               <div class="skill-pill">90%</div>
             </article>
-          </div>
+          </div> -->
           <div class="skill-charts">
             <article class="chart-card">
               <p class="chart-title">Skill distribution</p>
               <div class="skill-distribution">
                 <div class="skill-distribution-row">
                   <div class="radial-skill">
-                    <!-- <span>AI</span> -->
                     <strong>92%</strong>
                   </div>
                   <div class="skill-tile mini">
                     <h3>AI &amp; LLM Engineering</h3>
-                    <!-- <p>LLM workflows, LangGraph, RAG pipelines, prompt engineering, and Voice AI at production scale.</p> -->
+                    <ul class="skills-grid">
+                      <li>LLM Workflows</li>
+                      <li>LangGraph</li>
+                      <li>RAG Pipelines</li>
+                      <li>Prompt Engineering</li>
+                      <li>Voice AI / IVR</li>
+                      <li>Generative AI</li>
+                    </ul>
                   </div>
                 </div>
                 <div class="skill-distribution-row">
                   <div class="radial-skill">
-                    <!-- <span>Backend</span> -->
                     <strong>88%</strong>
                   </div>
                   <div class="skill-tile mini">
-                    <h3>Backend Architecture</h3>
-                    <p>Microservices, event-driven design, secure API ecosystems, and scalability for enterprise loads.</p>
+                    <h3>Languages &amp; Frameworks</h3>
+                    <ul class="skills-grid">
+                      <li>Python</li>
+                      <li>Java</li>
+                      <li>Spring Boot</li>
+                      <li>React</li>
+                      <li>REST APIs</li>
+                      <li>Node.js</li>
+                    </ul>
                   </div>
                 </div>
                 <div class="skill-distribution-row">
                   <div class="radial-skill">
-                    <!-- <span>Cloud</span> -->
                     <strong>85%</strong>
                   </div>
                   <div class="skill-tile mini">
-                    <h3>Cloud &amp; DevOps</h3>
-                    <p>CI/CD, container orchestration, Kubernetes, observability, and hardened release pipelines.</p>
-                  </div>
-                </div>
-                <div class="skill-distribution-row">
-                  <div class="radial-skill">
-                    <!-- <span>Lead</span> -->
-                    <strong>90%</strong>
-                  </div>
-                  <div class="skill-tile mini">
-                    <h3>Systems Leadership</h3>
-                    <p>Team coaching, architectural review, product delivery, and cross-functional alignment.</p>
+                    <h3>Architecture &amp; Integrations</h3>
+                    <ul class="skills-grid">
+                      <li>Microservices</li>
+                      <li>Event-driven Architecture</li>
+                      <li>Distributed Systems</li>
+                      <li>Multi-tenant Systems</li>
+                      <li>OAuth2</li>
+                      <li>Webhooks</li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </article>
-            <article class="chart-card">
-              <p class="chart-title">Core strengths</p>
-              <div class="skill-bars">
-                <div class="skill-row">
-                  <span>LLM &amp; RAG</span>
-                  <div class="bar-track"><div class="bar-fill fill-92"></div></div>
+            <div class="chart-stack">
+              <article class="chart-card">
+                <p class="chart-title">Core strengths</p>
+                <div class="skill-bars">
+                  <div class="skill-row">
+                    <span>LLM &amp; RAG</span>
+                    <div class="bar-track"><div class="bar-fill fill-92"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <span>Microservices</span>
+                    <div class="bar-track"><div class="bar-fill fill-80"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <span>Kubernetes</span>
+                    <div class="bar-track"><div class="bar-fill fill-75"></div></div>
+                  </div>
+                  <div class="skill-row">
+                    <span>CI/CD</span>
+                    <div class="bar-track"><div class="bar-fill fill-85"></div></div>
+                  </div>
                 </div>
-                <div class="skill-row">
-                  <span>Microservices</span>
-                  <div class="bar-track"><div class="bar-fill fill-80"></div></div>
+              </article>
+              <article class="chart-card">
+                <p class="chart-title">Operations &amp; tools</p>
+                <div class="skill-distribution">
+                  <div class="skill-distribution-row">
+                    <div class="radial-skill">
+                      <strong>90%</strong>
+                    </div>
+                    <div class="skill-tile mini">
+                      <h3>DevOps &amp; Cloud</h3>
+                      <ul class="skills-grid">
+                        <li>AWS</li>
+                        <li>Azure</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>CI/CD</li>
+                        <li>Helm</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="skill-distribution-row">
+                    <div class="radial-skill">
+                      <strong>90%</strong>
+                    </div>
+                    <div class="skill-tile mini">
+                      <h3>Databases &amp; Tools</h3>
+                      <ul class="skills-grid">
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>Redis</li>
+                        <li>ActiveMQ</li>
+                        <li>Git</li>
+                        <li>Linux</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="skill-row">
-                  <span>Kubernetes</span>
-                  <div class="bar-track"><div class="bar-fill fill-75"></div></div>
-                </div>
-                <div class="skill-row">
-                  <span>CI/CD</span>
-                  <div class="bar-track"><div class="bar-fill fill-85"></div></div>
-                </div>
-              </div>
-            </article>
+              </article>
+            </div>
           </div>
-          <div class="skills-list">
+          <!-- <div class="skills-list">
             <article class="skill-category">
               <h3>AI &amp; LLM Engineering</h3>
               <ul>
@@ -279,7 +331,7 @@
                 <li>Linux</li>
               </ul>
             </article>
-          </div>
+          </div> -->
         </section>
 
         <section id="work" class="section work">
@@ -330,7 +382,7 @@
         <section id="experience" class="section experience-flow">
           <div class="section-heading">
             <p class="section-label">Professional Experience</p>
-            <h2>A process-driven progression across design, architecture, delivery, and scaling.</h2>
+            <!-- <h2>A process-driven progression across design, architecture, delivery, and scaling.</h2> -->
           </div>
           <div class="flow-track" aria-label="Professional experience process flow">
             <article class="flow-step">
@@ -368,7 +420,7 @@
           </div>
         </section>
 
-        <section id="experience-detail" class="section experience-detail">
+        <!-- <section id="experience-detail" class="section experience-detail">
           <div class="section-heading">
             <p class="section-label">Detailed Experience</p>
             <h2>Role-specific highlights from every step in my engineering journey.</h2>
@@ -412,7 +464,7 @@
               </ul>
             </article>
           </div>
-        </section>
+        </section> -->
 
         <section id="projects" class="section projects">
           <div class="section-heading">
@@ -472,25 +524,45 @@
             <p class="section-label">Articles & Insights</p>
             <h2>Thought leadership in AI, architecture, and voice systems.</h2>
           </div>
-          <div class="insight-grid">
-            <article class="insight-card">
-              <span class="tag">AI/LLM</span>
-              <h3>Building Production-Ready LLM Applications: A Deep Dive into LangGraph</h3>
-              <p>Exploring how to architect robust LLM workflows using LangGraph, handling state management, and deploying at scale.</p>
-              <a href="#" class="button">Read More →</a>
-            </article>
-            <article class="insight-card">
-              <span class="tag">Architecture</span>
-              <h3>Event-Driven Microservices: Design Patterns for High-Volume Operations</h3>
-              <p>Best practices for building scalable, maintainable microservices with event-driven architecture patterns.</p>
-              <a href="#" class="button">Read More →</a>
-            </article>
-            <article class="insight-card">
-              <span class="tag">Voice AI</span>
-              <h3>Real-Time Voice AI: Implementing Sentiment Analysis in IVR Systems</h3>
-              <p>Technical deep-dive into implementing real-time sentiment analysis and emotion detection in voice AI platforms.</p>
-              <a href="#" class="button">Read More →</a>
-            </article>
+          <div class="insight-carousel">
+            <div class="carousel-track">
+              <article class="insight-card">
+                <span class="tag">AI/LLM</span>
+                <h3>Building Production-Ready LLM Applications: A Deep Dive into LangGraph</h3>
+                <p>Exploring how to architect robust LLM workflows using LangGraph, handling state management, and deploying at scale.</p>
+                <a href="#" class="button">Read More →</a>
+              </article>
+              <article class="insight-card">
+                <span class="tag">Architecture</span>
+                <h3>Event-Driven Microservices: Design Patterns for High-Volume Operations</h3>
+                <p>Best practices for building scalable, maintainable microservices with event-driven architecture patterns.</p>
+                <a href="#" class="button">Read More →</a>
+              </article>
+              <article class="insight-card">
+                <span class="tag">Voice AI</span>
+                <h3>Real-Time Voice AI: Implementing Sentiment Analysis in IVR Systems</h3>
+                <p>Technical deep-dive into implementing real-time sentiment analysis and emotion detection in voice AI platforms.</p>
+                <a href="#" class="button">Read More →</a>
+              </article>
+              <article class="insight-card">
+                <span class="tag">AI/LLM</span>
+                <h3>Building Production-Ready LLM Applications: A Deep Dive into LangGraph</h3>
+                <p>Exploring how to architect robust LLM workflows using LangGraph, handling state management, and deploying at scale.</p>
+                <a href="#" class="button">Read More →</a>
+              </article>
+              <article class="insight-card">
+                <span class="tag">Architecture</span>
+                <h3>Event-Driven Microservices: Design Patterns for High-Volume Operations</h3>
+                <p>Best practices for building scalable, maintainable microservices with event-driven architecture patterns.</p>
+                <a href="#" class="button">Read More →</a>
+              </article>
+              <article class="insight-card">
+                <span class="tag">Voice AI</span>
+                <h3>Real-Time Voice AI: Implementing Sentiment Analysis in IVR Systems</h3>
+                <p>Technical deep-dive into implementing real-time sentiment analysis and emotion detection in voice AI platforms.</p>
+                <a href="#" class="button">Read More →</a>
+              </article>
+            </div>
           </div>
         </section>
 
@@ -499,31 +571,57 @@
             <p class="section-label">What Clients Say</p>
             <h2>Trusted feedback from enterprise and product leaders.</h2>
           </div>
-          <div class="testimonial-grid">
-            <article class="testimonial-card">
-              <p class="testimonial-rating">★★★★★</p>
-              <p>"Ahmed's technical leadership and architectural decisions were instrumental in delivering our CRM backend supporting 300+ agents. His attention to scalability and reliability is exceptional."</p>
-              <div class="testimonial-author">
-                <strong>Project Manager, First National Bank</strong>
-                <span>South Africa Banking</span>
-              </div>
-            </article>
-            <article class="testimonial-card">
-              <p class="testimonial-rating">★★★★★</p>
-              <p>"Working with Ahmed on the Voice AI platform was a game-changer. His expertise in LLM workflows and system architecture delivered exactly what we needed."</p>
-              <div class="testimonial-author">
-                <strong>Team Lead, Telecom Enterprise</strong>
-                <span>Telecom Service Provider</span>
-              </div>
-            </article>
-            <article class="testimonial-card">
-              <p class="testimonial-rating">★★★★★</p>
-              <p>"Ahmed consistently delivers high-quality code and demonstrates strong architectural thinking. His leadership in code reviews and CI/CD improvements elevated our entire engineering team."</p>
-              <div class="testimonial-author">
-                <strong>Engineering Manager, ExpertFlow</strong>
-                <span>ExpertFlow Engineering</span>
-              </div>
-            </article>
+          <div class="testimonial-marquee">
+            <div class="marquee-track">
+              <article class="testimonial-card">
+                <p class="testimonial-rating">★★★★★</p>
+                <p>"Ahmed's technical leadership and architectural decisions were instrumental in delivering our CRM backend supporting 300+ agents. His attention to scalability and reliability is exceptional."</p>
+                <div class="testimonial-author">
+                  <strong>Project Manager, First National Bank</strong>
+                  <span>South Africa Banking</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-rating">★★★★★</p>
+                <p>"Working with Ahmed on the Voice AI platform was a game-changer. His expertise in LLM workflows and system architecture delivered exactly what we needed."</p>
+                <div class="testimonial-author">
+                  <strong>Team Lead, Telecom Enterprise</strong>
+                  <span>Telecom Service Provider</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-rating">★★★★★</p>
+                <p>"Ahmed consistently delivers high-quality code and demonstrates strong architectural thinking. His leadership in code reviews and CI/CD improvements elevated our entire engineering team."</p>
+                <div class="testimonial-author">
+                  <strong>Engineering Manager, ExpertFlow</strong>
+                  <span>ExpertFlow Engineering</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-rating">★★★★★</p>
+                <p>"Ahmed's technical leadership and architectural decisions were instrumental in delivering our CRM backend supporting 300+ agents. His attention to scalability and reliability is exceptional."</p>
+                <div class="testimonial-author">
+                  <strong>Project Manager, First National Bank</strong>
+                  <span>South Africa Banking</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-rating">★★★★★</p>
+                <p>"Working with Ahmed on the Voice AI platform was a game-changer. His expertise in LLM workflows and system architecture delivered exactly what we needed."</p>
+                <div class="testimonial-author">
+                  <strong>Team Lead, Telecom Enterprise</strong>
+                  <span>Telecom Service Provider</span>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-rating">★★★★★</p>
+                <p>"Ahmed consistently delivers high-quality code and demonstrates strong architectural thinking. His leadership in code reviews and CI/CD improvements elevated our entire engineering team."</p>
+                <div class="testimonial-author">
+                  <strong>Engineering Manager, ExpertFlow</strong>
+                  <span>ExpertFlow Engineering</span>
+                </div>
+              </article>
+            </div>
           </div>
         </section>
 
